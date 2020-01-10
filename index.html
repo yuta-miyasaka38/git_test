@@ -22,9 +22,75 @@
         <li>複数のブランチ作成が上手くできない。。※本日の課題</li>
     </ol>
     
-    <h2>2020年1月10日の学習<h2>
+    <h2>2020年1月10日の学習</h2>
         <ol>
             <li>git pull　※github上のデータをとってくる<li>
+            <li>git remote add bak URL ※リモートレポジトリにブランチを追加（URLとブランチの紐づけ）</li>
+            <li>git remote　※ブランチの表示</li>
+            <li>git push -u bak master ※マスターのワークツリーをブランチにコピー</li>
+            <li>git branch -a ※ブランチ一覧を表示</li>
+            <li>ブランチとリモートの違いがわからない ※本日の課題</li>
         </ol>
+        <p>夜の学習分</p>
+            <li>ブランチは最新のコミットをさすポインタ</li>
+            <li>コミット内のparentで履歴をたどる</li>
+            <li>複数作成（分岐）・マージ可能</li>
+            <li>
+                <p>ワークツリー - ステージ - コミット - github</p>
+                <p>リモートレポジトリはgithub上のフォルダ<br>
+                （ローカルにコピルと、remote/リモートレポジトリ名/ブランチ名のレポジトリができる）</p>
+                <p>リモートレポジトリをpull／fetchするとローカルにブランチができる</p>
+                <p>remote origin/master ※リモートブランチの指定は origin/masterでOK</p>
+            </li>
+            <li>git fetch origin ※レポジトリ名originのデータをステージにコピー</li>
+            <li>git merge origin/master ※とってきたレポジトリを現在のブランチにマージ</li>
+            <li>git fetchは2段階、pullは1段階でコピー ※pullは今いるブランチにマージ。ブランチの確認必須</li>
+            <li>git remote ※ローカル内のレポジトリ一覧</li>
+            <li>git remote show origin　※指定したレポジトリの詳細</li>
+            <li>git remote -v ※リモートのURL一覧</li>
+            <li>git remote rename master new_master ※リモート名の変更</li>
+            <li>git remote rm new_master　※リモートの削除</li>
+
+            <p>ブランチ</p>
+            <li>git branch topic1 ※ブランチ名topic1を作成</li>
+            <li>git log --oneline ※各ブランチがどのコミットを指しているか確認<br>
+                HEADの位置も確認 ※自分がいまいるブランチ
+            </li>
+            <li>git branch -b topic1 ※ブランチ作成し、移動<br>
+                = git branch topic1 -> git checkout topic1
+            </li>
+            <li>git branch -m topic2　※今いるブランチの名前変更。 -mはmove</li>
+            <li>git branch -d topic2　※ブランチの削除（安全版 mergeされてない場合削除しない）</li>
+            <li>git branch -D topic2 ※ブランチの削除(強制)</li>
+
+            <p>マージ</p>
+            <li>git maerge リモート名</li>
+            <li>git merge リモート名/ブランチ名</li>
+            <li>fastforward, automerge, conflict<br>
+                <ul>
+                    <li>fastforward ※進んだ更新に合わせる。ポインタが前に一つ進むだけ</li>
+                    <li>automerge　※他のブランチと統合</li>
+                    <li>conflict　※同一ファイル変更時に発生。元ファイル修正</li>
+                </ul>
+            </li>
+            <p>githubフロー</p>
+            <li>masterブランチを最新に更新 ※masterはリリースのみに使用。開発では使用しない</li>
+            <li>開発用ブランチを作成 例topic1</li>
+            <li>ファイルを変更</li>
+            <li>変更をコミット　※ローカルレポジトリ</li>
+            <li>Githubへpush　※github</li>
+            <li>プルリクエストを送る　※github上。比較対象とreviewrを選択</li>
+            <li>コードレビュー</li>
+            <li>プルリクエスト内容をマージ　※topic1 -> master</li>
+            <li>ブランチを削除</li>
+            <li>masterをデプロイ　※本番環境へアップ</li>
+            <li>ローカルのブランチをmasterに切り替え</li>
+            <li>githubのmasterをローカルにコピー</li>
+
+        <h2>2020年1月11日の学習内容</h2>
+            
+
+
+
 </body>
 </html>
