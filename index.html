@@ -33,6 +33,7 @@
             <li>git mergeの勉強中 21時頃<li>
         </ol>
         <p>夜の学習分</p>
+         <ol>
             <li>ブランチは最新のコミットをさすポインタ</li>
             <li>コミット内のparentで履歴をたどる</li>
             <li>複数作成（分岐）・マージ可能</li>
@@ -51,8 +52,9 @@
             <li>git remote -v ※リモートのURL一覧</li>
             <li>git remote rename master new_master ※リモート名の変更</li>
             <li>git remote rm new_master　※リモートの削除</li>
-
+        </ol>
             <p>ブランチ</p>
+            <ol>
             <li>git branch topic1 ※ブランチ名topic1を作成</li>
             <li>git log --oneline ※各ブランチがどのコミットを指しているか確認<br>
                 HEADの位置も確認 ※自分がいまいるブランチ
@@ -63,8 +65,9 @@
             <li>git branch -m topic2　※今いるブランチの名前変更。 -mはmove</li>
             <li>git branch -d topic2　※ブランチの削除（安全版 mergeされてない場合削除しない）</li>
             <li>git branch -D topic2 ※ブランチの削除(強制)</li>
-
+        </ol>
             <p>マージ</p>
+            <ol>
             <li>git maerge リモート名</li>
             <li>git merge リモート名/ブランチ名</li>
             <li>fastforward, automerge, conflict<br>
@@ -74,7 +77,10 @@
                     <li>conflict　※同一ファイル変更時に発生。元ファイル修正</li>
                 </ul>
             </li>
+        </ol>
+    
             <p>githubフロー</p>
+            <ol>
             <li>masterブランチを最新に更新 ※masterはリリースのみに使用。開発では使用しない</li>
             <li>開発用ブランチを作成 例topic1</li>
             <li>ファイルを変更</li>
@@ -87,9 +93,19 @@
             <li>masterをデプロイ　※本番環境へアップ</li>
             <li>ローカルのブランチをmasterに切り替え</li>
             <li>githubのmasterをローカルにコピー</li>
+        </ol>
 
         <h2>2020年1月11日の学習内容</h2>
-            
+        <p>githubフロー実践</p>
+        <ol>
+            <li>git branch ※今いるブランチを確認</li>
+            <li>git branch master※必要に応じてmasterに移動</li>
+            <li>git status ※ローカルの状態を確認。最新にコミットし、push</li>
+            <li>git pull origin master※githubの状態を合わせる</li>
+            <li>git checkout -b github_flow ※新しいブランチを作成し、移動</li>
+            <li>ファイルを変更</li>
+            <li>git diff 変更内容を確認</li>
+        </ol>    
 
 
 
